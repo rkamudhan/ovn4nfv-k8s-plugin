@@ -7,6 +7,7 @@ import (
 	"os"
 	"strings"
 	"time"
+	"reflect"
 )
 
 const (
@@ -34,6 +35,11 @@ var SetupOvnUtils = func() error {
 	err := setupDistributedRouter(ovn4nfvRouterName)
 	if err != nil {
 		log.Error(err, "Failed to initialize OVN Distributed Router")
+		return err
+	}
+	_, err = createOvnLS(Ovn4nfvDefaultNw, "10.244.64.0/18", "10.244.64.20/18", "10.244.64.0..10.244.64.16")
+	if err != nil && !reflect.DeepEqual(err, fmt.Errorf("LS exists")) { 
+		log.Error(err, "Failed to create ovn4nfvk8s default nw")
 		return err
 	}
 	return nil
