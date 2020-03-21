@@ -20,6 +20,7 @@ type ProviderNetworkSpec struct {
 	Routes          []Route    `json:"routes,omitempty"`
 	ProviderNetType string     `json:"providerNetType"`
 	Vlan            VlanSpec   `json:"vlan"` // For now VLAN is the only supported type
+	Direct          DirectSpec `json:"direct"`
 }
 
 type VlanSpec struct {
@@ -28,6 +29,12 @@ type VlanSpec struct {
 	NodeLabelList         []string `json:"nodeLabelList,omitempty"` // if VlanNodeSelector is value "specific" then this array provides a list of nodes labels
 	ProviderInterfaceName string   `json:"providerInterfaceName"`
 	LogicalInterfaceName  string   `json:"logicalInterfaceName,omitempty"`
+}
+
+type DirectSpec struct {
+	DirectNodeSelector    string   `json:"directNodeSelector"`      // "all"/"any"(in which case a node will be randomly selected)/"specific"(see below)
+	NodeLabelList         []string `json:"nodeLabelList,omitempty"` // if DirectNodeSelector is value "specific" then this array provides a list of nodes labels
+	ProviderInterfaceName string   `json:"providerInterfaceName"`
 }
 
 // ProviderNetworkStatus defines the observed state of ProviderNetwork

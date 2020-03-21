@@ -18,7 +18,7 @@ require (
 	github.com/go-openapi/swag v0.19.6 // indirect
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/groupcache v0.0.0-20191227052852-215e87163ea7 // indirect
-	github.com/golang/protobuf v1.3.2
+	github.com/golang/protobuf v1.3.5
 	github.com/google/btree v1.0.0 // indirect
 	github.com/google/go-cmp v0.3.1 // indirect
 	github.com/gophercloud/gophercloud v0.2.0 // indirect
