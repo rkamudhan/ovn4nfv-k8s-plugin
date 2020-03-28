@@ -1,7 +1,6 @@
 # Example Setup and Testing
 
-In this `./example` folder, OVN4NFV-plugin daemonset yaml file, VLAN and direct Provider networking testing scenarios and required sample
-configuration file.
+In this `./example` folder, OVN4NFV-plugin daemonset yaml file, VLAN and direct Provider networking testing scenarios and required sample configuration file are provided
 
 # Quick start
 
@@ -12,8 +11,7 @@ will create two VMs and provide the required sandbox.
 
 ## VLAN Tagging Provider network testing
 
-The following setup have 2 VMs with one VM having Kubernetes setup with OVN4NFVk8s plugin and another VM act as provider networking to do
-testing.
+The following setup have 2 VMs with one VM having Kubernetes setup with OVN4NFVk8s plugin and another VM act as provider networking to do testing.
 
 Run the following yaml file to test teh vlan tagging provider networking. User required to change the `providerInterfaceName` and
 `nodeLabelList` in the `ovn4nfv_vlan_pn.yml`
