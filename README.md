@@ -1,6 +1,24 @@
 # OVN4NFV K8s Plugin - Network controller
+This plugin addresses the below requirements, for networking                   
+workloads as well typical application workloads                                
+- Multi ovn network support
+- Multi-interface ovn support                                                      
+- Multi-IP address support                                                     
+- Dynamic creation of virtual networks                                                                             
+- Route management across virtual networks and external networks
+- Service Function chaining(SFC) support in Kubernetes
+- SRIOV Overlay networking (WIP)
+- OVN load balancer (WIP)
 
 ## How it works
+
+OVN4NFV consist of 4 major components
+- OVN control plane
+- OVN controller
+- Network Function Network(NFN) k8s operator/controller
+- Network Function Network(NFN) agent
+
+OVN control plane and OVN controller take care of OVN configuration and installation in each node in Kubernetes. NFN operator runs in the Kubernetes master and NFN agent run as a daemonset in each node.
 
 ### OVN for k8s and NFV architecture blocks
 
