@@ -1,17 +1,15 @@
-.. Copyright 2018 Intel Corporation.
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+# OVN4NFV K8s Plugin - Network controller
 
-=================
-OVN4NFVK8s Plugin/nfn-operator (Network Function Networking operator)
-=================
+## How it works
+
+### OVN for k8s and NFV architecture blocks
+
+#### NFN Operator
+* Exposes virtual, provider, chaining CRDs to external world
+* Programs OVN to create L2 switches
+#### NFN Agent
+
+### Networks traffice between pods
 
 Problem statement
 -----------------
