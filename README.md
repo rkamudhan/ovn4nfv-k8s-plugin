@@ -45,7 +45,7 @@ ovn4nfv-default-nw is the default logic switch create for the default networking
 
 In general production env, we have multiple Network function such as SLB, NGFW and SDWAN CNFs. 
 
-There are general two sfc flows are there:
+There are general 3 sfc flows are there:
 * Packets from the pod to reach internet: Ingress (L7 LB) -> SLB -> NGFW -> SDWAN CNF -> External router -> Internet
 * Packets from the pod to internal server in the corp network: Ingress (L7 LB) -> SLB -> M3 server
 * Packets from the internal server M3 to reach internet: M3 -> SLB -> NGFW -> SDWAN CNF -> External router -> Internet
